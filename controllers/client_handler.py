@@ -32,7 +32,7 @@ def register_client_handler(dp: Dispatcher):
 
 async def command_faq(message: Message):
     await message.answer("Факт №1:\n"
-                         "Ты петух")
+                         "Камчатка крутое место")
 
 
 async def command_ask(message: Message):
