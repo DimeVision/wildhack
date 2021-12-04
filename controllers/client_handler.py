@@ -1,5 +1,5 @@
 from bot_init import bot, dispatcher
-from keyboards import main_keyboard, quiz_keyboard
+from keyboards.client_navigator import main_keyboard, quiz_keyboard, hint_keyboard
 from bicycle.quiz_collection import quiz_map
 
 from aiogram.dispatcher import FSMContext
@@ -48,7 +48,8 @@ async def command_register(message: Message):
 
 
 async def command_facts(message: Message):
-    await message.answer("Узнай много интересного", reply_markup=)
+    await message.answer("Узнай много <b>интересного</b>\n"
+                         "", reply_markup=hint_keyboard)
 
 
 @dispatcher.message_handler(commands=['fill'], state=None)

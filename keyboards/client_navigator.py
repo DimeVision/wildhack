@@ -27,3 +27,7 @@ hint_b10 = KeyboardButton('/10')
 hint_b11 = KeyboardButton('/11')
 hint_b12 = KeyboardButton('/12')
 hint_b13 = KeyboardButton('/13')
+
+hint_keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
+hint_keyboard.add(hint_b1, hint_b2, hint_b3, hint_b4, hint_b5, hint_b6, hint_b7, hint_b8, hint_b9, hint_b10, hint_b11,
+                  hint_b12, hint_b13)
