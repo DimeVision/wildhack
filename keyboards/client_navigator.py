@@ -1,18 +1,12 @@
-from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove, InlineKeyboardMarkup, \
+    InlineKeyboardButton
 
-quiz_b1 = KeyboardButton('/Ознакомлен')
-quiz_b2 = KeyboardButton('/Узнать')
-
-quiz_keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
-quiz_keyboard.add(quiz_b1, quiz_b2)
-
-main_b1 = KeyboardButton('Задать вопрос')
-main_b2 = KeyboardButton('FAQ')
-main_b3 = KeyboardButton('Интересные факты')
-main_b4 = KeyboardButton('Зарегистрироваться')
+main_b1 = KeyboardButton('FAQ')
+main_b2 = KeyboardButton('Интересный факт')
+main_b3 = KeyboardButton('Зарегистрироваться')
 
 main_keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
-main_keyboard.add(main_b1, main_b2).add(main_b3).insert(main_b4)
+main_keyboard.add(main_b1).add(main_b2).insert(main_b3)
 
 hint_b1 = KeyboardButton('1')
 hint_b2 = KeyboardButton('2')
@@ -35,6 +29,12 @@ hint_keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
 hint_keyboard.add(hint_b1, hint_b2, hint_b3, hint_b4, hint_b5, hint_b6, hint_b7, hint_b8, hint_b9, hint_b10, hint_b11,
                   hint_b12, hint_b13, hint_b14, hint_b15).insert(hint_back)
 
+agreement_b1 = KeyboardButton('Даю согласие')
+agreement_b2 = KeyboardButton('Не даю согласие')
 
-question_keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
-question_keyboard.add(hint_back)
+agreement_keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
+agreement_keyboard.add(agreement_b1, agreement_b2)
+
+cancel_bt = KeyboardButton('Отмена')
+cancel_kb = ReplyKeyboardMarkup(resize_keyboard=True)
+cancel_kb.add(cancel_bt)

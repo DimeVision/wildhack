@@ -1,1 +1,1 @@
-from keyboards.client_navigator import quiz_keyboard, main_keyboard
+from keyboards.client_navigator import main_keyboard
